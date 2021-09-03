@@ -7,7 +7,7 @@ database_path = 'postgresql://hwabivydkzlskf:0ac8a4cbb275bf218592e40b22dae4d2693
 db = SQLAlchemy()
 
 def setup_db(app, database_path=database_path):
-    # app.config["SQLALCHEMY_DATABASE_URI"] = database_path
+    app.config["SQLALCHEMY_DATABASE_URI"] = database_path
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
     db.app = app
     db.init_app(app)
