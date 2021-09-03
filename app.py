@@ -28,7 +28,7 @@ from forms import *
 # from flask_migrate import Migrate
 from sqlalchemy import func
 import sys
-from models import setup_db, db_drop_and_create_all, Venue, Artist, Show
+from models import db, setup_db, db_drop_and_create_all, Venue, Artist, Show
 #----------------------------------------------------------------------------#
 # App Config.
 #----------------------------------------------------------------------------#
