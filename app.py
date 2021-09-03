@@ -38,6 +38,7 @@ app = Flask(__name__)
 # moment = Moment(app)
 app.config.from_object('config')
 
+db.app = app
 db.init_app(app)
 db.create_all()
 # migrate = Migrate(app, db)
