@@ -19,7 +19,7 @@ from flask import (
   url_for,
   abort
 )
-from flask_moment import Moment
+# from flask_moment import Moment
 from flask_sqlalchemy import SQLAlchemy
 import logging
 from logging import Formatter, FileHandler
@@ -36,7 +36,7 @@ from models import db, setup_db, db_drop_and_create_all, Venue, Artist, Show
 app = Flask(__name__)
 setup_db(app)
 # moment = Moment(app)
-# app.config.from_object('config')
+app.config.from_object('config')
 
 # migrate = Migrate(app, db)
 db_drop_and_create_all()
