@@ -41,6 +41,7 @@ app.config.from_object('config')
 
 db.app = app
 db.init_app(app)
+db.drop_all()
 
 # migrate = Migrate(app, db)
 
