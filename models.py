@@ -2,18 +2,6 @@ from flask_sqlalchemy import SQLAlchemy
 db = SQLAlchemy()
 
 
-
-database_path = 'postgres://hwabivydkzlskf:0ac8a4cbb275bf218592e40b22dae4d2693618d74b63e93fc9761e461b6f61d6@ec2-44-198-80-194.compute-1.amazonaws.com:5432/db2g12mkfigind'
-
-
-def setup_db(app, database_path=database_path):
-
-    app.config["SQLALCHEMY_DATABASE_URI"] = database_path
-    app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
-    db.app = app
-    db.init_app(app)
-
-
 class Venue(db.Model):
     __tablename__ = 'venue'
 
