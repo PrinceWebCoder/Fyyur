@@ -19,7 +19,7 @@ from flask import (
   url_for,
   abort
 )
-# from flask_moment import Moment
+from flask_moment import Moment
 from flask_sqlalchemy import SQLAlchemy
 import logging
 from logging import Formatter, FileHandler
@@ -34,21 +34,18 @@ from models import setup_db, db, Venue, Artist, Show
 #----------------------------------------------------------------------------#
 
 app = Flask(__name__)
-# moment = Moment(app)
+moment = Moment(app)
 app.config.from_object('config')
 
 setup_db(app)
 # migrate = Migrate(app, db)
 
 
-# TODO: connect to a local postgresql database ✓
 
 #----------------------------------------------------------------------------#
 # Models.
 #----------------------------------------------------------------------------#
 
-
-# TODO Implement Show and Artist models, and complete all model relationships and properties, as a database migration. ✓
 
 #----------------------------------------------------------------------------#
 # Filters.
