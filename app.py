@@ -34,12 +34,13 @@ from models import db, setup_db, db_drop_and_create_all, Venue, Artist, Show
 #----------------------------------------------------------------------------#
 
 app = Flask(__name__)
-setup_db(app)
+
 # moment = Moment(app)
 app.config.from_object('config')
 
+setup_db(app)
 # migrate = Migrate(app, db)
-db_drop_and_create_all()
+# db_drop_and_create_all()
 
 
 #----------------------------------------------------------------------------#
