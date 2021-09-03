@@ -40,7 +40,7 @@ app.config.from_object('config')
 
 setup_db(app)
 # migrate = Migrate(app, db)
-# db_drop_and_create_all()
+db_drop_and_create_all()
 
 
 #----------------------------------------------------------------------------#
