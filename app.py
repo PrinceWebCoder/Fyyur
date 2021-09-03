@@ -28,7 +28,7 @@ from forms import *
 # from flask_migrate import Migrate
 from sqlalchemy import func
 import sys
-from models import db, Venue, Artist, Show
+from models import setup_db, db, Venue, Artist, Show
 #----------------------------------------------------------------------------#
 # App Config.
 #----------------------------------------------------------------------------#
@@ -37,7 +37,7 @@ app = Flask(__name__)
 # moment = Moment(app)
 app.config.from_object('config')
 
-db.init_app(app)
+setup_db(app)
 # migrate = Migrate(app, db)
 
 
