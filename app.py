@@ -19,13 +19,13 @@ from flask import (
   url_for,
   abort
 )
-from flask_moment import Moment
+# from flask_moment import Moment
 from flask_sqlalchemy import SQLAlchemy
 import logging
 from logging import Formatter, FileHandler
 from flask_wtf import Form
 from forms import *
-from flask_migrate import Migrate
+# from flask_migrate import Migrate
 from sqlalchemy import func
 import sys
 from models import db, Venue, Artist, Show
@@ -34,11 +34,11 @@ from models import db, Venue, Artist, Show
 #----------------------------------------------------------------------------#
 
 app = Flask(__name__)
-moment = Moment(app)
+# moment = Moment(app)
 app.config.from_object('config')
 
 db.init_app(app)
-migrate = Migrate(app, db)
+# migrate = Migrate(app, db)
 
 
 # TODO: connect to a local postgresql database ✓
